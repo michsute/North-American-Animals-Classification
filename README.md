@@ -1,4 +1,4 @@
-# African-jungle---Image-Classification
+# North AMerican Animals Classification
 
 Authors: Nadine Flück, Michelle Suter, Sevan Sherbetjian 
 ### Project description
