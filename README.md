@@ -1,4 +1,4 @@
-# North AMerican Animals Classification
+# North American Animals Classification
 
 Authors: Nadine Flück, Michelle Suter, Sevan Sherbetjian 
 ### Project description
