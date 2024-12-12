@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import pydeck as pdk
+import numpy as np
 
 
 def show_dashboard():
@@ -20,31 +21,40 @@ def show_dashboard():
     with col1:
         st.header("Map")
 
-        min_date = df['timestamp'].min().date()
-        max_date = df['timestamp'].max().date() 
 
         # Filter für die Tierarten
         species_options = df['common_name'].unique()
-        selected_animals = st.multiselect("Choose species:", animal_options)
+        selected_animals = st.multiselect("Choose species:", species_options)
+        
 
         # Wenn keine Tiere ausgewählt sind, zeige eine Fehlermeldung
         if not selected_animals:
-            st.error("Bitte wähle mindestens ein Tier aus.")
+            st.error("Please choose at least one species")
             return
+        
+        # Filtere die Daten nach den ausgewählten Tieren
+        filtered_animal_data = df[df['common_name'].isin(selected_animals)]
+
+        min_date = df['timestamp'].min().date()
+        max_date = df['timestamp'].max().date() 
 
         selected_time = st.slider(
-        "Wähle einen Zeitpunkt:",
-        min_value=min_date,
-        max_value=max_date,
-        value=min_date,
-        format="YYYY-MM-DD"
-        )
+            "Choose a time:",
+            min_value=min_date,
+            max_value=max_date,
+            value=min_date,
+            format="YYYY-MM-DD"
+            )
 
         # Convert selected_time to datetime if it's a pandas Timestamp
         selected_time = selected_time.to_pydatetime() if isinstance(selected_time, pd.Timestamp) else selected_time
 
         # Filter data based on the selected time
-        filtered_data = df[df['timestamp'].dt.date <= selected_time]
+        filtered_data = filtered_animal_data[filtered_animal_data['timestamp'].dt.date <= selected_time]
+
+        # Farbcodierung für jede Spezies
+        spezies_colors = {animal: [int(np.random.randint(0, 255)), int(np.random.randint(0, 255)), int(np.random.randint(0, 255)), 255] for animal in selected_animals}
+
 
 
         # Pydeck-Karte erstellen
@@ -61,7 +71,7 @@ def show_dashboard():
                     'ScatterplotLayer',
                     data=filtered_data,
                     get_position='[longitude, latitude]',
-                    get_color='[200, 30, 0, 160]',
+                    get_color=spezies_colors,
                     get_radius=40000,
                     pickable=True,
                 ),
