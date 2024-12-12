@@ -1,21 +1,25 @@
-import streamlit as st"
-# page title
-st.title("North American Animals Classification")
+import streamlit as st
+from streamlit_option_menu import option_menu
 
-# Create three columns with different widths
-col1, col2, col3 = st.columns([1, 2, 1])
+from dashboard import show_dashboard
 
-# Content for the first column
-with col1:
-    st.header("Column 1")
-    st.write("text")
+#use wide mode
+st.set_page_config(layout="wide")
 
-# Content for the second column
-with col2:
-    st.header("Column 2")
-    st.write("text")
+st.sidebar.title("North American Animals Classification")
 
-# Content for the third column
-with col3:
-    st.header("Column 3")
-    st.write("text")
+with st.sidebar:
+    selected = option_menu(
+        menu_title=None,
+        options=["Dashboard", "Stat's & Trends", "Cameras & Numbers", "Settings"],
+        icons=["house", "graph-up",  "clipboard-data", "gear"]
+    )
+
+
+
+if selected == "Dashboard":
+    show_dashboard()
+
+
+
+
