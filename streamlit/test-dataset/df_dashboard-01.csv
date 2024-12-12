@@ -1,0 +1,41 @@
+seq_no	id	filename	study	location	width	height	category_id	name	genus	family	order	class	common_name
+19928	2010_Unit155_Ivan034_img0123.jpg	part0/sub001/2010_Unit155_Ivan034_img0123.jpg	CPW	San Juan Mntns, Colorado	2048	1536	10	cervus elaphus	cervus	cervidae	artiodactyla	mammalia	red deer
+893752	CA-36_08_04_2015_CA-36_0001802.jpg	part0/sub089/CA-36_08_04_2015_CA-36_0001802.jpg	CA	Lebec, California	2048	1536	9	cervus canadensis	cervus	cervidae	artiodactyla	mammalia	elk
+625361	CA-21_08_13_2015_CA-21_0005258.jpg	part0/sub062/CA-21_08_13_2015_CA-21_0005258.jpg	CA	Lebec, California	2048	1536	6	canis latrans	canis	canidae	carnivora	mammalia	coyote
+137299	2014_Unit20_Ivan127_img0812.jpg	part0/sub013/2014_Unit20_Ivan127_img0812.jpg	CPW	San Juan Mntns, Colorado	2048	1536	10	cervus elaphus	cervus	cervidae	artiodactyla	mammalia	red deer
+197900	2015_Unit031_Ivan047_img0960.jpg	part0/sub019/2015_Unit031_Ivan047_img0960.jpg	CPW	San Juan Mntns, Colorado	2048	1536	46	odocoileus hemionus	odocoileus	cervidae	artiodactyla	mammalia	mule deer
+53467	2010_Unit168_Ivan064_img0336.jpg	part0/sub005/2010_Unit168_Ivan064_img0336.jpg	CPW	San Juan Mntns, Colorado	2048	1536	46	odocoileus hemionus	odocoileus	cervidae	artiodactyla	mammalia	mule deer
+694723	CA-27_04_06_2015_CA-27_0000719.jpg	part0/sub069/CA-27_04_06_2015_CA-27_0000719.jpg	CA	Lebec, California	2048	1536	31	mephitis mephitis	mephitis	mephitidae	carnivora	mammalia	striped skunk
+1039271	CA-43_06_21_2016_CA-43_0021172.JPG	part1/sub103/CA-43_06_21_2016_CA-43_0021172.JPG	CA	Lebec, California	2048	1536	50	otospermophilus beecheyi	otospermophilus	sciuridae	rodentia	mammalia	california ground squirrel
+881309	CA-34_08_04_2015_CA-34_0013325.jpg	part0/sub088/CA-34_08_04_2015_CA-34_0013325.jpg	CA	Lebec, California	2048	1536	6	canis latrans	canis	canidae	carnivora	mammalia	coyote
+846965	CA-32_12_08_2015_CA-32_0004652.jpg	part0/sub084/CA-32_12_08_2015_CA-32_0004652.jpg	CA	Lebec, California	2048	1536	67	ursus americanus	ursus	ursidae	carnivora	mammalia	american black bear
+999468	CA-41_09_16_2015_CA-41_0016630.jpg	part0/sub099/CA-41_09_16_2015_CA-41_0016630.jpg	CA	Lebec, California	2048	1536	62	sus scrofa	sus	suidae	artiodactyla	mammalia	wild boar
+91754	2010_Unit182_Ivan091_img2039.jpg	part0/sub009/2010_Unit182_Ivan091_img2039.jpg	CPW	San Juan Mntns, Colorado	2048	1536	10	cervus elaphus	cervus	cervidae	artiodactyla	mammalia	red deer
+158742	2014_Unit70_Ivan140_img0427.jpg	part0/sub015/2014_Unit70_Ivan140_img0427.jpg	CPW	San Juan Mntns, Colorado	2048	1536	10	cervus elaphus	cervus	cervidae	artiodactyla	mammalia	red deer
+124142	2014_Unit173_Ivan063_img0181.jpg	part0/sub012/2014_Unit173_Ivan063_img0181.jpg	CPW	San Juan Mntns, Colorado	2048	1536	26	lynx rufus	lynx	felidae	carnivora	mammalia	bobcat
+2854363	FL-40_12_07_2015_FL-40_0003222.jpg	part2/sub285/FL-40_12_07_2015_FL-40_0003222.jpg	FL	Archbold, FL	2048	1536	26	lynx rufus	lynx	felidae	carnivora	mammalia	bobcat
+2854467	FL-40_12_07_2015_FL-40_0003383.jpg	part2/sub285/FL-40_12_07_2015_FL-40_0003383.jpg	FL	Archbold, FL	2048	1536	41	unidentified deer	odocoileus	cervidae	artiodactyla	mammalia	unidentified deer
+840921	CA-31_10_04_2016_CA-31_0031276.JPG	part0/sub084/CA-31_10_04_2016_CA-31_0031276.JPG	CA	Lebec, California	2048	1536	50	otospermophilus beecheyi	otospermophilus	sciuridae	rodentia	mammalia	california ground squirrel
+464748	CA-11_08_13_2015_CA-11_0007656.jpg	part0/sub046/CA-11_08_13_2015_CA-11_0007656.jpg	CA	Lebec, California	2048	1536	31	mephitis mephitis	mephitis	mephitidae	carnivora	mammalia	striped skunk
+255088	2016_Unit028_SWTB003_img0596.jpg	part0/sub025/2016_Unit028_SWTB003_img0596.jpg	CPW	San Juan Mntns, Colorado	2048	1536	10	cervus elaphus	cervus	cervidae	artiodactyla	mammalia	red deer
+685136	CA-25_11_14_2015_CA-25_0013008.jpg	part0/sub068/CA-25_11_14_2015_CA-25_0013008.jpg	CA	Lebec, California	2048	1536	6	canis latrans	canis	canidae	carnivora	mammalia	coyote
+1047744	CA-43_10_06_2016_CA-43_0030209.JPG	part1/sub104/CA-43_10_06_2016_CA-43_0030209.JPG	CA	Lebec, California	2048	1536	31	mephitis mephitis	mephitis	mephitidae	carnivora	mammalia	striped skunk
+475952	CA-12_09_07_2016_CA-12_0010201.JPG	part0/sub047/CA-12_09_07_2016_CA-12_0010201.JPG	CA	Lebec, California	2048	1536	50	otospermophilus beecheyi	otospermophilus	sciuridae	rodentia	mammalia	california ground squirrel
+841906	CA-32_04_02_2015_CA-32_0000212.jpg	part0/sub084/CA-32_04_02_2015_CA-32_0000212.jpg	CA	Lebec, California	2048	1536	50	otospermophilus beecheyi	otospermophilus	sciuridae	rodentia	mammalia	california ground squirrel
+2967703	CA-21_0005505.jpg	part2/sub296/CA-21_0005505.jpg			2048	1536	16	empty					empty
+3321931	FL-14_0018113.JPG	part3/sub332/FL-14_0018113.JPG			2048	1536	16	empty					empty
+2979691	CA-21_0019248.JPG	part2/sub297/CA-21_0019248.JPG			2048	1536	16	empty					empty
+1287635	FL-04_04_04_2016_FL-04_0017343.JPG	part1/sub128/FL-04_04_04_2016_FL-04_0017343.JPG	FL	Archbold, FL	2048	1536	41	unidentified deer	odocoileus	cervidae	artiodactyla	mammalia	unidentified deer
+118956	2014_Unit170_Ivan038_img1172.jpg	part0/sub011/2014_Unit170_Ivan038_img1172.jpg	CPW	San Juan Mntns, Colorado	2048	1536	10	cervus elaphus	cervus	cervidae	artiodactyla	mammalia	red deer
+684504	CA-25_09_18_2015_CA-25_0012568.jpg	part0/sub068/CA-25_09_18_2015_CA-25_0012568.jpg	CA	Lebec, California	2048	1536	62	sus scrofa	sus	suidae	artiodactyla	mammalia	wild boar
+389725	CA-06_04_27_2016_CA-06_0010213.JPG	part0/sub038/CA-06_04_27_2016_CA-06_0010213.JPG	CA	Lebec, California	2048	1536	67	ursus americanus	ursus	ursidae	carnivora	mammalia	american black bear
+2537513	FL-29_06_03_2015_FL-29_0013471.jpg	part2/sub253/FL-29_06_03_2015_FL-29_0013471.jpg	FL	Archbold, FL	2048	1536	41	unidentified deer	odocoileus	cervidae	artiodactyla	mammalia	unidentified deer
+863282	CA-34_04_03_2015_CA-34_0000732.jpg	part0/sub086/CA-34_04_03_2015_CA-34_0000732.jpg	CA	Lebec, California	2048	1536	31	mephitis mephitis	mephitis	mephitidae	carnivora	mammalia	striped skunk
+2084488	FL-18_11_02_2015_FL-18_0016027.jpg	part2/sub208/FL-18_11_02_2015_FL-18_0016027.jpg	FL	Archbold, FL	2048	1536	26	lynx rufus	lynx	felidae	carnivora	mammalia	bobcat
+3294493	CA-19_0013599.jpg	part3/sub329/CA-19_0013599.jpg			2048	1536	16	empty					empty
+64334	2010_Unit172_Ivan022_img1544.jpg	part0/sub006/2010_Unit172_Ivan022_img1544.jpg	CPW	San Juan Mntns, Colorado	2048	1536	46	odocoileus hemionus	odocoileus	cervidae	artiodactyla	mammalia	mule deer
+513203	CA-17_04_02_2015_CA-17_0002706.jpg	part0/sub051/CA-17_04_02_2015_CA-17_0002706.jpg	CA	Lebec, California	2048	1536	6	canis latrans	canis	canidae	carnivora	mammalia	coyote
+773626	CA-29_09_18_2015_CA-29_0027479.jpg	part0/sub077/CA-29_09_18_2015_CA-29_0027479.jpg	CA	Lebec, California	2048	1536	26	lynx rufus	lynx	felidae	carnivora	mammalia	bobcat
+319400	2016_Unit164_Ivan119_img0701.jpg	part0/sub031/2016_Unit164_Ivan119_img0701.jpg	CPW	San Juan Mntns, Colorado	2048	1536	10	cervus elaphus	cervus	cervidae	artiodactyla	mammalia	red deer
+1871942	FL-14_06_30_2015_FL-14_0007653.jpg	part1/sub187/FL-14_06_30_2015_FL-14_0007653.jpg	FL	Archbold, FL	2048	1536	41	unidentified deer	odocoileus	cervidae	artiodactyla	mammalia	unidentified deer
+1750616	FL-12_06_29_2015_FL-12_0000940.jpg	part1/sub175/FL-12_06_29_2015_FL-12_0000940.jpg	FL	Archbold, FL	2048	1536	41	unidentified deer	odocoileus	cervidae	artiodactyla	mammalia	unidentified deer
