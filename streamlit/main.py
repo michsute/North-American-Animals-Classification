@@ -4,10 +4,12 @@ from streamlit_option_menu import option_menu
 from dashboard import show_dashboard
 from stats_trends import show_stats_trends
 from cameras_numbers import show_cameras_numbers
+import pathlib
 
 
 #use wide mode
 st.set_page_config(layout="wide")
+
 
 st.sidebar.title("North American Animals Classification")
 

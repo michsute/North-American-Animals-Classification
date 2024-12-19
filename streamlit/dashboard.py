@@ -4,6 +4,7 @@ import pydeck as pdk
 import numpy as np
 
 
+
 def show_dashboard():
 
     df = pd.read_csv('./test-dataset/df_dashboard-02-time-long-lat.csv', sep=',', encoding='utf-8')
@@ -16,6 +17,12 @@ def show_dashboard():
 
     # Create three columns with different widths
     col1, col2 = st.columns([3, 1])
+
+    # Content for the second column
+    with col2:
+        st.header("Alerts")
+        st.write("text")
+
 
     # Content for the first column
     with col1:
@@ -83,8 +90,5 @@ def show_dashboard():
 
         st.write(df)
 
-    # Content for the second column
-    with col2:
-        st.header("Alerts")
-        st.write("text")
+   
 

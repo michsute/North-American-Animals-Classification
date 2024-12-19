@@ -14,12 +14,19 @@ def show_cameras_numbers():
 
     st.subheader("Filter Options")
 
-    # Dropdown-Filter für 'location'
-    location_filter = st.selectbox("Filter by Location:", options=["All"] + df['location'].dropna().unique().tolist())
+    # Multi-Select-Filter für 'location'
+    location_filter = st.multiselect(
+        "Filter by Location:", 
+        options=df['location'].dropna().unique().tolist(),
+        default=[]
+    )
 
-    # Dropdown-Filter für 'common_name'
-    common_name_filter = st.selectbox("Filter by Common Name:", options=["All"] + df['common_name'].dropna().unique().tolist())
-
+    # Multi-Select-Filter für 'common_name'
+    common_name_filter = st.multiselect(
+        "Filter by Common Name:", 
+        options=df['common_name'].dropna().unique().tolist(),
+        default=[]
+    )
 
     # Zeitraum auswählen
     col1, col2 = st.columns(2)
@@ -33,13 +40,13 @@ def show_cameras_numbers():
     # Zeitraumfilter anwenden
     filtered_df = filtered_df[(filtered_df['timestamp'] >= pd.Timestamp(start_date)) & (filtered_df['timestamp'] <= pd.Timestamp(end_date))]
 
+    # Location-Filter anwenden
+    if location_filter:
+        filtered_df = filtered_df[filtered_df['location'].isin(location_filter)]    
 
-
-    if location_filter != "All":
-        filtered_df = filtered_df[filtered_df['location'] == location_filter]
-
-    if common_name_filter != "All":
-        filtered_df = filtered_df[filtered_df['common_name'] == common_name_filter]
+    # Common Name-Filter anwenden
+    if common_name_filter:
+        filtered_df = filtered_df[filtered_df['common_name'].isin(common_name_filter)]
 
 
     st.subheader("Sightings")
