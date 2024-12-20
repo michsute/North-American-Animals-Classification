@@ -21,7 +21,7 @@ def show_dashboard():
     # Content for the second column
     with col2:
         st.header("Alerts")
-        st.write("text")
+        st.write("No unusual incidents at present")
 
 
     # Content for the first column
@@ -86,9 +86,9 @@ def show_dashboard():
         ))
 
 
-        st.write("text")
-
-        st.write(df)
-
+        st.write(''' This map visualizes the distribution of selected animal species 
+                 across different locations. Choose your species and time range to filter 
+                 the data. Hover over a location to see more details about the animal sightings at that point.
+                 ''')
    
 

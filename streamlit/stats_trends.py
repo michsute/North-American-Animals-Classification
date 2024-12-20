@@ -60,7 +60,15 @@ def show_stats_trends():
     # Display the chart
     st.altair_chart(chart, use_container_width=True)
 
-    
+    st.write('''This chart displays the monthly trend of animal sightings. 
+             You can filter the data by the common name of the species, 
+             and the chart will show how the number of sightings has changed over time. 
+             Each point on the line represents the total number of sightings for that month. 
+             over over the chart to view the exact number of sightings for each month. ''')
+
+    st.markdown('#')
+
+
     st.subheader("camera activity / location")
 
     # Convert 'timestamp' to datetime
@@ -115,58 +123,58 @@ def show_stats_trends():
     else:
         st.write(f"No data available for the selected months in {selected_year}.")
 
+    st.write('''This bar chart visualizes the camera activity for the selected year and months. 
+             It shows the number of animal captures at each location, with the locations listed 
+             on the x-axis and the capture counts on the y-axis. You can filter the data by year 
+             and month to see how the activity at each location varies over time. Hover over each 
+             bar to view the exact count of captures for each location. ''')
+
+    st.markdown('#')
+
+    st.subheader("species co-occurrence analysis")
+
+    # Load the dataset
+    df = pd.read_csv('./test-dataset/df_dashboard-02-time-long-lat.csv', sep=',', encoding='utf-8')
+
+    # Ensure the 'timestamp' column is in datetime format
+    df['timestamp'] = pd.to_datetime(df['timestamp'])
+
+    # Create a new DataFrame to track species at each location
+    df_filtered = df[['location', 'common_name']].drop_duplicates()
+
+    # Create a list of species pairs that occur together at the same location (ignoring timestamp)
+    species_pairs = []
+    for _, group in df_filtered.groupby('location'):  # Group only by location
+        species_list = group['common_name'].tolist()
+        for i in range(len(species_list)):
+            for j in range(i + 1, len(species_list)):
+                species_pairs.append((species_list[i], species_list[j]))
+
+    # Create a DataFrame from the species pairs
+    species_pair_df = pd.DataFrame(species_pairs, columns=['Species1', 'Species2'])
+
+    # Count the number of times each pair co-occurs at the same location
+    co_occurrence = species_pair_df.groupby(['Species1', 'Species2']).size().reset_index(name='Co-occurrence')
+
+
+    # Create the Altair heatmap
+    heatmap = alt.Chart(co_occurrence).mark_rect().encode(
+        x=alt.X('Species1:N', title=None, sort=alt.SortField('Co-occurrence', order='descending')),
+        y=alt.Y('Species2:N', title=None, sort=alt.SortField('Co-occurrence', order='descending')),
+        color=alt.Color('Co-occurrence:Q', scale=alt.Scale(range=['#f0f0f0', '#44592f'])),  # Custom color scale
+        tooltip=['Species1', 'Species2', 'Co-occurrence']
+    ).properties(
+        width=600,
+        height=600,
+        title="Species Co-occurrence Heatmap (By Location, Timestamp Ignored)"
+    )
+
+    # Display the heatmap
+    st.altair_chart(heatmap, use_container_width=True)
+
+    st.markdown('''
+                This heatmap visualizes the co-occurrence of species at the same location, 
+                without considering the time. Darker cells indicate higher co-occurrence, 
+                while lighter cells represent less frequent pairings. Hovering over a cell 
+                reveals the exact count of co-occurrences.''')
     
-    # Create two columns 
-    col1, col2 = st.columns([1, 1])
-
-    with col1:
-
-        st.subheader("species co-occurrence analysis")
-
-        # Load the dataset
-        df = pd.read_csv('./test-dataset/df_dashboard-02-time-long-lat.csv', sep=',', encoding='utf-8')
-
-        # Ensure the 'timestamp' column is in datetime format
-        df['timestamp'] = pd.to_datetime(df['timestamp'])
-
-        # Period selection - Slider to select time period in hours (24 hours default)
-        time_period = st.slider("Select the time period (hours):", min_value=1, max_value=48, value=24, step=1)
-
-
-        # Create a new DataFrame to track species at each location at each timestamp
-        df_filtered = df[['timestamp', 'location', 'common_name']].drop_duplicates()
-
-        # Filter out data based on the time period
-        time_threshold = pd.Timestamp.now() - timedelta(hours=time_period)
-
-        # Filter the data to only include records within the selected time period
-        df_filtered = df_filtered[df_filtered['timestamp'] >= time_threshold]
-
-        # Create a list of species pairs that occur together at the same location at the same time
-        species_pairs = []
-        for _, group in df_filtered.groupby(['timestamp', 'location']):
-            species_list = group['common_name'].tolist()
-            for i in range(len(species_list)):
-                for j in range(i + 1, len(species_list)):
-                    species_pairs.append((species_list[i], species_list[j]))
-
-        # Create a DataFrame from the species pairs
-        species_pair_df = pd.DataFrame(species_pairs, columns=['Species1', 'Species2'])
-
-        # Count the number of times each pair co-occurs
-        co_occurrence = species_pair_df.groupby(['Species1', 'Species2']).size().reset_index(name='Co-occurrence')
-
-        # Create the Altair heatmap
-        heatmap = alt.Chart(co_occurrence).mark_rect().encode(
-            x=alt.X('Species1:N', title='Species 1', sort=alt.SortField('Co-occurrence', order='descending')),
-            y=alt.Y('Species2:N', title='Species 2', sort=alt.SortField('Co-occurrence', order='descending')),
-            color='Co-occurrence:Q',
-            tooltip=['Species1', 'Species2', 'Co-occurrence']
-        ).properties(
-            width=600,
-            height=600,
-            title=f"Species Co-occurrence Heatmap (Last {time_period} Hours)"
-        )
-
-        # Display the heatmap
-        st.altair_chart(heatmap, use_container_width=True)
