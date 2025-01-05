@@ -1,6 +1,6 @@
 import streamlit as st
 from PIL import Image
-from clf_example_model import predict
+from clf_first_trained_model import predict
 
 def show_manual_image_upload():
     
@@ -14,7 +14,7 @@ def show_manual_image_upload():
         st.image(image, caption='Uploaded Image.', use_container_width=True)
         st.write("")
         st.write("Just a second...")
-        labels = predict(file_up)
+        labels = predict(file_up, "only_best_model_2025-01-04_18-58-30.pth", "labels.txt") #our trained model and labels
 
         # print out the top 5 prediction labels with scores
         for i in labels:
