@@ -1,11 +1,12 @@
-american black bear      
-coyote  gray fox
-striped skunk
-bobcat
-elk
-mule deer
-unidentified deer
-california ground squirrel
-empty
-red deer
-wild boar
+American Black Bear
+Bobcat
+California Ground Squirrel
+Coyote
+Elk
+Empty
+Gray Fox
+Mule Deer
+Red Deer
+Striped Skunk
+Unidentified Deer
+Wild Boar
