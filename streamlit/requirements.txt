@@ -1,0 +1,9 @@
+streamlit==1.41.1
+altair==4.2.2
+numpy==1.26.4
+Pillow==11.1.0
+pydeck==0.8.0b4
+streamlit_option_menu==0.4.0
+torch==2.2.2
+torchvision==0.17.2
+path==17.1.0
