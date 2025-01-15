@@ -11,6 +11,6 @@ Here is an explanation of the notebooks:
 + vision_train_evaluated.ipynb is a first test with ViT
 + resnet_no_training.ipynb classifies a samples of images on the original ResNet model without any training
 + resnet_final.ipynb is the trained model with best results
-+ 
++ streamlit contains the complete code for our streamlit implementation. the link to the deployed app can be found in our report.
 
 + resnet_add_layers.ipynb and resnet_data_augmentation.ipynb are explorations mentioned in the report regarding data augmentation and additional layers, respectively.
